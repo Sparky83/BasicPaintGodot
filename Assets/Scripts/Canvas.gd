@@ -36,7 +36,7 @@ func getSize():
 	return Global.brushSize
 	
 func max_dist_btwn_dots():
-	return Global.brushSize / 2.0
+	return Global.brushSize / 3.0
 
 func putBrushDot(pos):
 	draw_circle(pos, getSize(), Color.black)
