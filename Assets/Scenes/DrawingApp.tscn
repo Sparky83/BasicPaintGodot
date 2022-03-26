@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Scripts/DrawingApp.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Scenes/UIBrush.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Scripts/Canvas.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Scripts/Combiner.gd" type="Script" id=4]
+
+[node name="DrawingApp" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = -26.0
+margin_top = -20.0
+margin_right = 1050.0
+margin_bottom = 625.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Display" type="Sprite" parent="."]
+centered = false
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+render_target_clear_mode = 2
+
+[node name="Canvas" type="Node2D" parent="Viewport"]
+script = ExtResource( 3 )
+
+[node name="CombinerView" type="Sprite" parent="."]
+centered = false
+
+[node name="Combiner" type="Viewport" parent="."]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Combiner"]
+centered = false
+
+[node name="History" type="Node2D" parent="."]
+
+[node name="UI" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UIBrush" parent="UI" instance=ExtResource( 2 )]
+margin_left = 182.793
+margin_top = 29.9661
+margin_right = 382.793
+margin_bottom = 54.9661

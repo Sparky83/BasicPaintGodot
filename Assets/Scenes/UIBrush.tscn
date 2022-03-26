@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Fonts/pixelfont_04b.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Scripts/UIBrush.gd" type="Script" id=2]
+
+[node name="UIBrush" type="Panel"]
+margin_right = 200.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 200, 25 )
+rect_scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="."]
+margin_left = 2.64506
+margin_top = 1.76627
+margin_right = 51.6451
+margin_bottom = 9.76627
+custom_fonts/font = ExtResource( 1 )
+text = "Brush Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Size" type="Label" parent="."]
+margin_left = 168.665
+margin_top = 2.10224
+margin_right = 197.665
+margin_bottom = 10.1022
+custom_fonts/font = ExtResource( 1 )
+text = "23"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slider" type="HSlider" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.63067
+margin_top = 8.52843
+margin_right = -5.36932
+margin_bottom = -0.471569
+min_value = 1.0
+value = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
